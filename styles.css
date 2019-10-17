@@ -1,0 +1,77 @@
+/* colors
+light #ee4540
+#c72C41
+#801336
+#510A32
+#2D142C */
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;  
+}
+header {
+  display:flex;
+  justify-content:space-between;
+  background-color: white;
+  padding:0 20px;
+  height:80px;
+}
+.search{
+  width:200px;
+  height:35px;
+}
+
+main {
+  display:flex;
+
+}
+
+.aside {
+  color:white;
+  height: calc(100vh - 80px);
+  width: 18%;
+  min-width: 200px;
+  background-color: #510A32
+}
+
+.btn,
+input {
+  width:80%;
+}
+
+.add-idea {
+  width:20px;
+  height:20px;
+  font-size:20px;
+  line-height: 20px;;
+}
+
+
+
+
+/* Task List Styles */
+
+.checklist{
+  width:200px;
+  border:1px solid #510A32;
+  margin:5px 10px;
+}
+
+.list-header{
+  background-color: #801336;
+  font-size: 18px;
+  line-height: 18px;
+  color:white;
+  padding:5px 5px 10px 10px;
+}
+
+.task-list {
+  list-style: none;
+  padding-left:10px;
+}
+
+.list-footer{
+  display:flex;
+  justify-content: space-between;
+  padding:5px 5px 10px 10px;
+}

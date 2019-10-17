@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-Your-Self</title>
+  </head>
+<body>
+<header>
+  <h1 class="title">All the TO-DO things</h1>
+  <div>
+    <input type="text" class="search" /><button type='button'>Search</button>
+</div>
+</header>
+<main>
+  <section class="aside"><p>Enter ideas and lists</p>
+    <p class="lable">Task Title</p>
+    <input type="text" class="list-item" placeholder='List Item'/>
+    <div>
+      <ul class="js__taskList">
+          <li class="task">Added Task</li>
+      </ul>  
+      <p>Task Item</p>
+      <input type="text" class="list-item" placeholder='List Item'/>
+      <button class="btn add-idea" type='button'>+</button>
+    </div>
+    <button class="btn js-make-list-btn" type='button'>Make Task List</button>
+    <button class="btn js-clear-btn" type='button'>Clear All</button>
+    <button class="btn js-filter-btn" type='button'>Filter by Urgency</button>
+  </section>
+  <div class="main__div-lists">
+    <div class="checklist">
+      <div class="tasklist">
+        <div class="list-header">Title</div> 
+        <ul class="task-list">
+          <li class="task-item">Task1</li>
+          <li class="task-item">Task2</li>
+          <li class="task-item">Task3</li>
+          <li class="task-item">Task4</li>
+          <li class="task-item">Task4</li>
+        </ul>
+        <footer class="list-footer">
+          <div class="urgent-btn">
+            urgent
+          </div>
+          <div class="favorite-btn">
+            favorite
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="checklist">
+        <div class="tasklist">
+          <div class="list-header">Title</div> 
+          <ul class="task-list">
+            <li class="task-item">Task1</li>
+            <li class="task-item">Task2</li>
+            <li class="task-item">Task3</li>
+            <li class="task-item">Task4</li>
+            <li class="task-item">Task4</li>
+          </ul>
+          <footer class="list-footer">
+            <div class="urgent-btn">
+              urgent
+            </div>
+            <div class="favorite-btn">
+              favorite
+            </div>
+          </footer>
+        </div>
+      </div>
+  </div>
+</main>
+  
+</body>
+</html>
