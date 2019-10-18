@@ -5,14 +5,11 @@ pink #fcd0ba
 red #f1828d
 drk #765d69 */
 
-
-
-*{
+* {
   box-sizing: border-box;
   padding:0;
   margin:0;
   font-family: 'Roboto';
- 
 }
 
 header {
@@ -25,25 +22,34 @@ header {
   height:80px;
 }
 
-.title{
+.title {
   color: #8fb9a8;
 }
-.search-icon{
+
+.search-container {
+  display:flex;
+  height:35px;
+}
+
+.search-icon {
   height:35px;
   background-color: #765d69;
   border-radius: 10px 0px 0px 10px;
   padding:5px;
+  margin:0;
+  cursor:pointer;
 }
 
-.search{
+.search {
   width:200px;
   height:35px;
   border-radius: 0 10px 10px 0;
+  margin:0;
 }
 
 main {
   display:flex;
-  background:#765d69
+  background:#765d69;
 
 }
 
@@ -60,26 +66,32 @@ main {
 }
 
 .aside__header {
-
+  margin:auto;
+  font-size:18px;
+}
+.dom-task {
+  display:flex;
 }
 
-.task-title{}
+.text-input {
+ padding-left:10px;
+ margin:0;
+}
 
-.list-item{
-  width:calc(90% - 30px);
-  margin-right:0;
-
-  border-radius:10px 0 0 10px
+.lable,
+.js__taskList {
+  margin-left:7%;
+  list-style: none;
 }
 
 .lable {
   font-size: 12px;
   margin-top:15px;
-  
 }
 
 .btn,
-input {
+input,
+.list-container {
   width:90%;
   height:30px;
   font-size:20px;
@@ -88,22 +100,34 @@ input {
   outline:none;
 }
 
-.add-idea{
-  border-radius: 0 10px 10px 0;
-  height:30px;
+.task-title {
+  width:90%;
+  margin:0 auto 10px 5%;
+
 }
 
-.text-input  {
- padding-left:10px;
+.btn{
+  cursor:pointer;
+  background-color: #f1828d;
+  color:white;
 }
 
-.add-idea {
-  width:20px;
+.list-item {
+  width:76%;
+  margin-right:0;
+  border-radius:10px 0 0 10px
+}
+
+.add-task {
+  width:20%;
   height:30px;
   font-size:20px;
   line-height: 20px;
   margin:0;
+  border-radius: 0 10px 10px 0;
+  height:30px;
   background-color: #f1828d;
+  color:white;
 }
 
 .main__div-list {
@@ -137,7 +161,12 @@ input {
   list-style: none;
   padding-left:10px;
 }
-.talk-checkbox {
+
+.task-item {
+  margin-bottom: 8px;
+}
+
+.icon {
   height:16px;
   width:16px;
   display:inline-block;
@@ -152,5 +181,18 @@ input {
   display:flex;
   justify-content: space-between;
   padding:5px 5px 10px 10px;
-  border-top:1px dashed #f1828d
+  border-top:2px dashed #f1828d;
+  padding-top:15px;
+  margin-top:5px;
+}
+
+.urgent-btn,
+.delete-btn {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  font-size:14px;
+  cursor:pointer;
+  border:none;
+  background-color: #fefad4;
 }
