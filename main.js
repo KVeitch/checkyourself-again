@@ -19,10 +19,28 @@ listItemInput.addEventListener('keydown', inputEnter)
 listContainer.addEventListener('click', mainClickHandeler)
 
 function mainClickHandeler(e) {
-  if(e.target.closest('div').classList.contains('delete-btn')) 
+  console.log(e.target)
+  if(e.target.closest('div').classList.contains('delete-btn')){ 
   e.target.closest('section').remove()
+  }
+
+  if(e.target.getAttribute('src') === './images/checkbox.svg') {
+    changeCheckBox(e);
+  }
+
+  if(e.target.dataset.name === 'urgentBtn'){
+    console.log('hi')
+    e.target.closest('section').classList.add('urgent')
+    
+  }
+  
 }
 
+
+const changeCheckBox = (e) => {
+  document.getElementById(e.target.id).setAttribute('src','./images/checkbox-active.svg');
+  e.target.closest('li').classList.add('checked')
+}
 
 function asideClickHandler (e) {
   if(e.target.classList.contains('add-task')) addTaskToNav();
@@ -53,41 +71,47 @@ const addTaskToNav = () => {
 
 const makeNavTask = (taskId) => {
   domTasks.insertAdjacentHTML('beforeend',
-    `<li class="dom-task" data-id="${taskId}" id="${taskId}">
+    `<li class="dom-task" data-id="${taskId}">
         <input type='image' src='./images/delete.svg' class='icon js-li-delete'>
         <p class='nav__li--text'>${listItemInput.value}</p>
       </li>`);
 }
 
-
 const createList= () => {
   const domTaskList = []
-  
-  document.querySelectorAll('.dom-task').forEach(task => domTaskList.push({id:task.id, text:task.innerText}))
-  const bob = domTaskList.map(domTask => `
-  <li class="task-item" id=${domTask.id}><input class="icon talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">${domTask.text}</p></li>
+  const title = document.querySelector('.task-title').value;
+  const id = Date.now()
+  document.querySelectorAll('.dom-task').forEach(task => domTaskList.push({id:task.dataset.id, text:task.innerText}))
+  const tasks = domTaskList.map(domTask => `
+  <li class="task-item" ><input id=${domTask.id} class="icon task-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">${domTask.text}</p></li>
   `)
-  console.log('bob: ',bob)
+
   listContainer.insertAdjacentHTML(
     "afterbegin",
-    `<section class="checklist">
+    `<section class="checklist" id=${id}>
     <div class="tasklist">
-      <div class="list-header">Title</div> 
+      <div class="list-header">${title}</div> 
       <ul class="task-list">
-        ${bob.join('')}
+        ${tasks.join('')}
         
       </ul>
       <footer class="list-footer">
-        <div class="urgent-btn">
-          <img class='icon' src='./images/urgent.svg' />
+        <div class="urgent-btn" data-name='urgentBtn'>
+          <img class='icon' data-name='urgentBtn' src='./images/urgent.svg' />
           urgent
         </div>
-        <div class="delete-btn">
-          <img class='icon' src='./images/delete.svg' />
+        <div class="delete-btn" data-name='btn'}>
+          <img class='icon' data-name='btn' src='./images/delete.svg' />
           All done
         </div>
       </footer>
     </div>
   </section>`
   );
+  document.querySelector('.js__taskList').innerHTML = '';
+  document.querySelector('.task-title').value = '';
 };
+
+const checkOffTask = () => {
+
+}

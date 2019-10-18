@@ -143,13 +143,13 @@ input,
   border:2px dashed #f1828d;
   border-radius: 10px;
   margin:5px 10px;
-  background-color:#fefad4;
+  background-color:#fcd0ba;
   display:inline-block;
 
 }
 
 .list-header{
-  background-color: #f1828d;
+  background-color: #765d69;
   border-radius: 10px 10px 0px 0px;
   font-size: 18px;
   line-height: 28px;
@@ -187,6 +187,11 @@ input,
   margin-top:5px;
 }
 
+.checked p {
+  color:#8fb9a8;
+  text-decoration: line-through #765d69;
+}
+
 .urgent-btn,
 .delete-btn {
   display:flex;
@@ -195,5 +200,15 @@ input,
   font-size:14px;
   cursor:pointer;
   border:none;
-  background-color: #fefad4;
+  background-color: #fcd0ba ;
 }
+
+.urgent,
+.urgent div {
+  background-color: #fefad4 ;
+}
+
+.urgent .list-header {
+  background-color: #f1828d;
+}
+
