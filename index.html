@@ -10,58 +10,50 @@
     <title>Check-Your-Self</title>
   </head>
 <body>
+
 <header>
-  <h1 class="title">All the TO-DO things</h1>
-  <div>
-    <input type="text" class="search" /><button type='button'>Search</button>
+  <h1 class="title">All the things to do!</h1>
+  <div class='search-container'>
+    <image type='button' class='search-icon' src='./images/search.svg'/>
+    <input type="text" class="search" />
 </div>
 </header>
 <main>
-  <section class="aside"><p>Enter ideas and lists</p>
+  <section class="aside"><p class="aside__header">Enter ideas and lists</p>
     <p class="lable">Task Title</p>
-    <input type="text" class="list-item" placeholder='List Item'/>
+    <input type="text" class="text-input task-title" placeholder='Task Title'/>
     <div>
       <ul class="js__taskList">
-          <li class="task">Added Task</li>
+          <li class="task">Added Task 1</li>
+          <li class="task">Added Task 2</li>
+          <li class="task">Added Task 3</li>
       </ul>  
-      <p>Task Item</p>
-      <input type="text" class="list-item" placeholder='List Item'/>
+      <p class="lable">Task Item</p>
+      <input type="text" class="text-input list-item" placeholder='List Item'/>
       <button class="btn add-idea" type='button'>+</button>
     </div>
     <button class="btn js-make-list-btn" type='button'>Make Task List</button>
     <button class="btn js-clear-btn" type='button'>Clear All</button>
-    <button class="btn js-filter-btn" type='button'>Filter by Urgency</button>
+    <button class="btn js-filter-btn" type='button'>Urgency Lists</button>
   </section>
-  <div class="main__div-lists">
-    <div class="checklist">
-      <div class="tasklist">
-        <div class="list-header">Title</div> 
-        <ul class="task-list">
-          <li class="task-item">Task1</li>
-          <li class="task-item">Task2</li>
-          <li class="task-item">Task3</li>
-          <li class="task-item">Task4</li>
-          <li class="task-item">Task4</li>
-        </ul>
-        <footer class="list-footer">
-          <div class="urgent-btn">
-            urgent
-          </div>
-          <div class="favorite-btn">
-            favorite
-          </div>
-        </footer>
-      </div>
-    </div>
+  <div class="main__div-list">
+    
+
+    <!-- Checklist for styling -->
     <div class="checklist">
         <div class="tasklist">
           <div class="list-header">Title</div> 
           <ul class="task-list">
-            <li class="task-item">Task1</li>
-            <li class="task-item">Task2</li>
-            <li class="task-item">Task3</li>
-            <li class="task-item">Task4</li>
-            <li class="task-item">Task4</li>
+            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task1</p></li>
+            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task2</p></li>
+            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task3</p></li>
+            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
+            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
+            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task1</p></li>
+            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task2</p></li>
+            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task3</p></li>
+            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
+            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
           </ul>
           <footer class="list-footer">
             <div class="urgent-btn">
@@ -73,8 +65,11 @@
           </footer>
         </div>
       </div>
+      <!-- End CHeclist for styling -->
   </div>
 </main>
   
+<script type="text/javascript" src="todo-list.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>

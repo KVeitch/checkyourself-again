@@ -1,28 +1,49 @@
 /* colors
-light #ee4540
-#c72C41
-#801336
-#510A32
-#2D142C */
+green #8fb9a8
+yellow #fefad4
+pink #fcd0ba
+red #f1828d
+drk #765d69 */
+
+
+
 *{
   box-sizing: border-box;
   padding:0;
-  margin:0;  
+  margin:0;
+  font-family: 'Roboto';
+ 
 }
+
 header {
   display:flex;
   justify-content:space-between;
-  background-color: white;
+  align-items: center;
+  background-color: #765d69;
+  color:white;
   padding:0 20px;
   height:80px;
 }
+
+.title{
+  color: #8fb9a8;
+}
+.search-icon{
+  height:35px;
+  background-color: #765d69;
+  border-radius: 10px 0px 0px 10px;
+  padding:5px;
+}
+
 .search{
   width:200px;
   height:35px;
+  border-radius: 0 10px 10px 0;
 }
 
 main {
   display:flex;
+  background:#765d69
 
 }
 
@@ -31,47 +52,105 @@ main {
   height: calc(100vh - 80px);
   width: 18%;
   min-width: 200px;
-  background-color: #510A32
+  background-color: #765d69;
+  border-radius:15px;
+  border-right: 2px dashed #f1828d;
+  border-top: 2px dashed #f1828d;
+  padding:20px 10px;
+}
+
+.aside__header {
+
+}
+
+.task-title{}
+
+.list-item{
+  width:calc(90% - 30px);
+  margin-right:0;
+
+  border-radius:10px 0 0 10px
+}
+
+.lable {
+  font-size: 12px;
+  margin-top:15px;
+  
 }
 
 .btn,
 input {
-  width:80%;
+  width:90%;
+  height:30px;
+  font-size:20px;
+  margin:0 10px 10px 10px;
+  border-radius:10px;
+  outline:none;
+}
+
+.add-idea{
+  border-radius: 0 10px 10px 0;
+  height:30px;
+}
+
+.text-input  {
+ padding-left:10px;
 }
 
 .add-idea {
   width:20px;
-  height:20px;
+  height:30px;
   font-size:20px;
-  line-height: 20px;;
+  line-height: 20px;
+  margin:0;
+  background-color: #f1828d;
 }
 
-
+.main__div-list {
+  background-color:#765d69;
+  width:82%
+}
 
 
 /* Task List Styles */
 
 .checklist{
   width:200px;
-  border:1px solid #510A32;
+  border:2px dashed #f1828d;
+  border-radius: 10px;
   margin:5px 10px;
+  background-color:#fefad4;
+
 }
 
 .list-header{
-  background-color: #801336;
+  background-color: #f1828d;
+  border-radius: 10px 10px 0px 0px;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 28px;
   color:white;
-  padding:5px 5px 10px 10px;
+  padding-left: 10px;
+  margin-bottom:10px;
 }
 
 .task-list {
   list-style: none;
   padding-left:10px;
 }
+.talk-checkbox {
+  height:16px;
+  width:16px;
+  display:inline-block;
+  margin:0;
+}
+.task-text{
+  display: inline-block;
+  margin-left:5px;
+}
 
 .list-footer{
   display:flex;
   justify-content: space-between;
   padding:5px 5px 10px 10px;
+  border-top:1px dashed #f1828d
 }
