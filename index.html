@@ -21,20 +21,22 @@
 <main>
   <section class="aside"><p class="aside__header">Enter ideas and lists</p>
     <p class="lable">Task Title</p>
-    <input type="text" class="text-input task-title" placeholder='Task Title'/>
+    
+      <input type="text" class="text-input task-title" placeholder='Task Title'/>
+ 
     <div>
       <ul class="js__taskList">
-          <li class="task">Added Task 1</li>
-          <li class="task">Added Task 2</li>
-          <li class="task">Added Task 3</li>
-      </ul>  
+        <!-- task insert here -->
+      </ul> 
       <p class="lable">Task Item</p>
-      <input type="text" class="text-input list-item" placeholder='List Item'/>
-      <button class="btn add-idea" type='button'>+</button>
+      <div class="list-container">
+        <input type="text" class="text-input list-item" placeholder='List Item'/>
+        <button class="btn add-task" type='button'>+</button>
+      </div> 
     </div>
     <button class="btn js-make-list-btn" type='button'>Make Task List</button>
     <button class="btn js-clear-btn" type='button'>Clear All</button>
-    <button class="btn js-filter-btn" type='button'>Urgency Lists</button>
+    <button class="btn js-filter-btn" type='button'>Urgent Lists</button>
   </section>
   <div class="main__div-list">
     
@@ -44,23 +46,25 @@
         <div class="tasklist">
           <div class="list-header">Title</div> 
           <ul class="task-list">
-            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task1</p></li>
-            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task2</p></li>
-            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task3</p></li>
-            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
-            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
-            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task1</p></li>
-            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task2</p></li>
-            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task3</p></li>
-            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
-            <li class="task-item"><input class="talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
+            <li class="task-item"><input class="icon talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task1</p></li>
+            <li class="task-item"><input class="icon talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task2</p></li>
+            <li class="task-item"><input class="icon talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task3</p></li>
+            <li class="task-item"><input class="icon talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
+            <li class="task-item"><input class="icon talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
+            <li class="task-item"><input class="icon talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task1</p></li>
+            <li class="task-item"><input class="icon talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task2</p></li>
+            <li class="task-item"><input class="icon talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task3</p></li>
+            <li class="task-item"><input class="icon talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
+            <li class="task-item"><input class="icon talk-checkbox" type="image" src='./images/checkbox.svg'><p class="task-text">Task4</p></li>
           </ul>
           <footer class="list-footer">
             <div class="urgent-btn">
+              <img class='icon' src='./images/urgent.svg' />
               urgent
             </div>
-            <div class="favorite-btn">
-              favorite
+            <div class="delete-btn">
+              <img class='icon' src='./images/delete.svg' />
+              All done
             </div>
           </footer>
         </div>
@@ -69,7 +73,7 @@
   </div>
 </main>
   
-<script type="text/javascript" src="todo-list.js"></script>
+<!-- <script type="text/javascript" src="todo-list.js"></script> -->
 <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
